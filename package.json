@@ -1,0 +1,52 @@
+{
+    "name": "chi",
+    "version": "0.1.0",
+    "title": "Chi",
+    "description": "Types and extensions for declarative data transformations.",
+    "keywords": ["declarative", "functional", "monad", "maybe"],
+    "author": {
+        "name": "Chris Eargle",
+        "email": "kodefuguru@live.com",
+        "url": "http://kodefuguru.com"
+    },
+    "repository": {
+        "type":"git",
+        "url":"https://github.com/kodefuguru/chi"
+    },
+    "bugs": {
+        "url":"http://github.com/kodefuguru/chi/issues",
+        "email":"kodefuguru@live.com"
+    },
+    "homepage": "http://kodefuguru.com/chi",
+    "contributors": [
+        {
+            "name":"Chris Eargle",
+            "email":"kodefuguru@live.com",
+            "url": "http://kodefuguru.com"
+        }
+    ],
+    "main": "./gruntfile.coffee",
+    "directories": {
+        "doc": "./doc"
+    },
+    "noAnalyze": true,
+    "engines": {
+        "node": ">=0.6"
+    },
+    "licenses": [
+      {
+          "type": "MIT",
+          "url": "http://opensource.org/licenses/MIT"
+      }
+    ],    
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-nuget": "~0.1.3",
+        "grunt-msbuild": "~0.2.2",
+        "grunt-template": "~0.2.3",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-copy": "~0.5.0",
+        "grunt-contrib-watch": "~0.6.1"
+    }
+}

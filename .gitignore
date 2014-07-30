@@ -1,0 +1,7 @@
+*.jmconfig
+node_modules/
+build/
+dist/
+packages/
+bin/
+obj/
