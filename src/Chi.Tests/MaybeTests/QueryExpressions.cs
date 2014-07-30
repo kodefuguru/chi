@@ -94,7 +94,7 @@ namespace Chi.MaybeTests
             Assert.AreEqual(expectedValue, result.Value);
         }
 
-        [Test, Description("This expression with two valued maybes and one empty maybe should return maybe with described value.")]
+        [Test, Description("This expression with two valued maybes and one empty maybe should return an empty maybe.")]
         public void FromTwoValuesAndThirdEmpty()
         {
             Maybe<int> third = Maybe<int>.Empty;
