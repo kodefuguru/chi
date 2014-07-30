@@ -22,7 +22,7 @@ The null coalescing operator cannot be overridden, so Maybe&lt;T&gt; takes the J
 
 #### Parsing
 
-Use the static parsing methods to safely convert strings. There's no need to specify 'out' parameters or catch parsing exceptions.
+Use the static parsing methods to safely convert strings. There's no need to specify `out` parameters or catch parsing exceptions.
 
     var result = Maybe.Int(str) | 1;
 
@@ -30,7 +30,7 @@ Use the static parsing methods to safely convert strings. There's no need to spe
 
 You can use the LINQ operators implemented by Maybe&lt;T&gt; to chain functions together. If it loses its value in the course of execution, the remaining functions in the chain will not execute.
 
-    Maybe&lt;T&gt; maybe = 1;
+    Maybe<int> maybe = 1;
     var noneOrOdd = maybe.Select(x => x + liftedValue)
                          .Where(x => x % 2 == 0)
                          .Select(x => x + 1);
