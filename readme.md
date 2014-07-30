@@ -12,7 +12,7 @@ Install GlyphIcon by running the following command in Package Manager Console
 
 ### Maybe
 
-Maybe&lt;T&gt; is an option type similar to Nullable&lt;T&gt;, and a Maybe&lt;T&gt; variable may or may not hold a value. Unlike Nullable&lt;T&gt;, Maybe&lt;T&gt; contains generic type restrictions, working with both value and reference types.
+Maybe&lt;T&gt; is an option type similar to Nullable&lt;T&gt;, and a Maybe&lt;T&gt; variable may or may not hold a value. Unlike Nullable&lt;T&gt;, Maybe&lt;T&gt; is without generic type restrictions, working with both value and reference types.
 
 #### Coalescing
 
@@ -39,14 +39,8 @@ You can use the LINQ operators implemented by Maybe&lt;T&gt; to chain functions 
 
 The Query Expression syntax is available with maybe to create guarded expressions.
 
-var result = from x in maybeA
-             from y in maybeB
-             where y != 0
-             select x / y;
-
-
-
-
-
-
+    var result = from x in maybeA
+                 from y in maybeB
+                 where y != 0
+                 select x / y;
 
