@@ -52,7 +52,6 @@
             return System.Guid.TryParse(value, out result) ? result : Maybe<Guid>.Empty;
         }
 
-
         public static Maybe<int> Int(string value)
         {
             int result;
@@ -123,18 +122,13 @@
             this.hasValue = value != null;
         }
 
-        public bool Do(Action<T> action)
+        public Maybe<T> Do(Action<T> action)
         {
             if (hasValue)
-            { 
+            {
                 action(value);
             }
-            return hasValue;
-        }
-
-        public override string ToString()
-        {
-            return hasValue ? value.ToString() : String.Empty;
+            return this;
         }
 
         public Maybe<TResult> Select<TResult>(Func<T, TResult> selector)
@@ -160,7 +154,7 @@
         public Maybe<T> Where(Func<T, bool> predicate)
         {
             if (hasValue && predicate(value))
-            { 
+            {
                 return value;
             }
             return Maybe<T>.Empty;
@@ -188,11 +182,16 @@
             return hasValue ? value.GetHashCode() : 0;
         }
 
+        public override string ToString()
+        {
+            return hasValue ? value.ToString() : String.Empty;
+        }
+
         public static explicit operator T(Maybe<T> maybe)
         {
             return maybe.Value;
         }
-        
+
         public static implicit operator Maybe<T>(T item)
         {
             return new Maybe<T>(item);

@@ -1,6 +1,6 @@
 {
     "name": "chi",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "title": "Chi",
     "description": "Types and extensions for declarative data transformations.",
     "keywords": ["declarative", "functional", "monad", "maybe"],
