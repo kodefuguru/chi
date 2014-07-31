@@ -1,15 +1,3 @@
-# [Chi](http://kodefuguru.com/chi)
-
-Types and extensions for declarative data transformations.
-
-## Quick start
-
-Install GlyphIcon by running the following command in Package Manager Console
-
-    PM> Install-Package chi
-
-## Types
-
 ### Maybe
 
 Maybe&lt;T&gt; is an option type similar to Nullable&lt;T&gt;, and a Maybe&lt;T&gt;; variable may or may not hold a value. Unlike Nullable&lt;T&gt;, Maybe&lt;T&gt; is without generic type restrictions, working with both value and reference types.
